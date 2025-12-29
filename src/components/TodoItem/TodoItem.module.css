@@ -1,0 +1,175 @@
+/* src/components/TodoItem/TodoItem.module.css */
+.item {
+	display: flex;
+	align-items: center;
+	padding: 12px 16px;
+	margin: 8px 0;
+	background-color: #ffffff;
+	border-radius: 8px;
+	border-left: 4px solid #2196f3;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+	cursor: default;
+}
+
+.item:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+	transform: translateY(-2px);
+	background-color: #f5f5f5;
+}
+
+.item.completed {
+	border-left-color: #4caf50;
+	background-color: #f8f8f8;
+	opacity: 0.9;
+}
+
+.checkbox {
+	width: 20px;
+	height: 20px;
+	margin-right: 12px;
+	cursor: pointer;
+	flex-shrink: 0;
+}
+
+.checkbox:hover {
+	transform: scale(1.1);
+}
+
+.titleContainer {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	min-height: 24px;
+	cursor: pointer;
+	overflow: hidden;
+	padding: 4px 0;
+}
+
+.title {
+	font-size: 16px;
+	line-height: 1.4;
+	color: #333333;
+	/* Явно темный цвет для светлой темы */
+	transition: color 0.3s;
+	/* Обеспечиваем обрезку текста одной строкой */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: calc(100% - 20px);
+}
+
+.item.completed .title {
+	color: #666666;
+	text-decoration: line-through;
+}
+
+.titleContainer:hover .title {
+	color: #2196f3;
+}
+
+.moreIndicator {
+	color: #2196f3;
+	font-weight: bold;
+	margin-left: 2px;
+	flex-shrink: 0;
+	font-size: 18px;
+}
+
+.detailsButton {
+	background: none;
+	border: 2px solid #2196f3;
+	color: #2196f3;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 4px 10px;
+	border-radius: 6px;
+	transition: all 0.2s;
+	flex-shrink: 0;
+	margin-left: 8px;
+	line-height: 1;
+	min-width: 36px;
+	min-height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.detailsButton:hover {
+	background-color: #2196f3;
+	color: white;
+	transform: scale(1.1);
+}
+
+/* Убираем старые стили для кнопок редактирования и удаления */
+.actions,
+.editBtn,
+.deleteBtn,
+.editInput,
+.editActions,
+.saveBtn,
+.cancelBtn {
+	display: none;
+}
+
+/* Стили для темной темы - переопределяем если включена системная темная тема */
+@media (prefers-color-scheme: dark) {
+	.item {
+		background-color: #2d3748;
+		border-color: #4299e1;
+	}
+
+	.item:hover {
+		background-color: #4a5568;
+	}
+
+	.item.completed {
+		background-color: #2d4a2d;
+		border-color: #48bb78;
+	}
+
+	.title {
+		color: #e2e8f0;
+		/* Светлый текст для темной темы */
+	}
+
+	.item.completed .title {
+		color: #a0aec0;
+	}
+
+	.titleContainer:hover .title {
+		color: #63b3ed;
+	}
+
+	.detailsButton {
+		background: none;
+		border: 2px solid #2196f3;
+		color: #2196f3;
+		font-size: 20px;
+		cursor: pointer;
+		padding: 6px;
+		/* Круглая кнопка */
+		transition: all 0.2s;
+		flex-shrink: 0;
+		margin-left: 8px;
+
+		/* Фиксированный размер для круглой кнопки */
+		width: 36px;
+		height: 36px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.detailsButton:hover {
+		background-color: #63b3ed;
+		color: #1a202c;
+		transform: scale(1.1);
+	}
+
+	.moreIndicator {
+		color: #63b3ed;
+	}
+}

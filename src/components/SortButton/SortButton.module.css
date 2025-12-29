@@ -1,0 +1,45 @@
+/* src/components/SortButton/SortButton.module.css */
+.sortContainer {
+	margin-bottom: 20px;
+	padding: 16px;
+	background-color: #f0f7ff;
+	border-radius: 8px;
+	border: 1px solid #bbdefb;
+}
+
+.sortButton {
+	padding: 12px 24px;
+	background-color: #e3f2fd;
+	color: #1565c0;
+	border: 2px solid #bbdefb;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.3s;
+	width: auto;
+	margin-bottom: 10px;
+}
+
+.sortButton:hover {
+	background-color: #bbdefb;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sortButton.active {
+	background-color: #2196f3;
+	color: white;
+	border-color: #2196f3;
+}
+
+.sortButton.active:hover {
+	background-color: #1976d2;
+}
+
+.sortInfo {
+	font-size: 14px;
+	color: #546e7a;
+	text-align: center;
+	font-style: italic;
+}

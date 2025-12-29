@@ -1,0 +1,15 @@
+/* src/App.module.css */
+.app {
+	text-align: center;
+	padding: 20px;
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	color: #534e4e;
+	margin-bottom: 30px;
+}
+
+.input {
+	width: 5%;
+}

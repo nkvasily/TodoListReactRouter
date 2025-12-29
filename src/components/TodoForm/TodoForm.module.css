@@ -1,0 +1,86 @@
+/* src/components/TodoForm/TodoForm.module.css */
+.form {
+	display: flex;
+	gap: 12px;
+	margin-bottom: 24px;
+	padding: 16px;
+	background-color: #f8f9fa;
+	border-radius: 8px;
+	align-items: center;
+}
+
+.input {
+	flex: 1;
+	/* Занимает все доступное пространство */
+	min-width: 250px;
+	/* Минимальная ширина */
+	padding: 12px 16px;
+	border: 2px solid #dee2e6;
+	border-radius: 6px;
+	font-size: 16px;
+	transition: border-color 0.3s;
+	background-color: white;
+	/* Явно белый фон */
+	color: #212529;
+	/* Темный текст */
+}
+
+.input:focus {
+	outline: none;
+	border-color: #2196f3;
+	box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.input:disabled {
+	background-color: #e9ecef;
+	color: #6c757d;
+	cursor: not-allowed;
+}
+
+.button {
+	padding: 12px 24px;
+	background-color: #2196f3;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.3s;
+	white-space: nowrap;
+	/* Чтобы текст не переносился */
+	max-width: 120px;
+	/* Фиксированная ширина кнопки */
+}
+
+.button:hover:not(:disabled) {
+	background-color: #1976d2;
+	transform: translateY(-1px);
+}
+
+.button:active:not(:disabled) {
+	transform: translateY(0);
+}
+
+.button:disabled {
+	background-color: #90caf9;
+	cursor: not-allowed;
+	opacity: 0.7;
+}
+
+/* Для темной темы - дополнительные стили */
+@media (prefers-color-scheme: dark) {
+	.form {
+		background-color: #2d3748;
+	}
+
+	.input {
+		background-color: #4a5568;
+		border-color: #718096;
+		color: #e2e8f0;
+	}
+
+	.input::placeholder {
+		color: #a0aec0;
+	}
+}

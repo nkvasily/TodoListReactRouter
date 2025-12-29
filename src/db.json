@@ -1,0 +1,63 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Купить продукты",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "title": "Позвонить маме",
+      "completed": false
+    },
+    {
+      "id": "4334",
+      "title": "Совместная работа",
+      "completed": false
+    },
+    {
+      "id": "5cb2",
+      "title": "Учится, Учится, Учится!",
+      "completed": false
+    },
+    {
+      "id": "27c8",
+      "title": "Английский учить",
+      "completed": true
+    },
+    {
+      "id": "ba8e",
+      "title": "Я-класс, повторить",
+      "completed": false
+    },
+    {
+      "id": "7335",
+      "title": "Объекты имеют свой тип данных, который называется 'object'. Можно поверить с помощью оператора typeof: console.log( typeof {} );",
+      "completed": false
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "комментарии": [
+    {
+      "id": " 1 ",
+      "text": " комментарий к посту 1 ",
+      "postId": " 1 "
+    },
+    {
+      "id": " 2 ",
+      "text": " другой комментарий к посту 1 ",
+      "postId": " 1 "
+    }
+  ]
+}
